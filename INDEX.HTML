@@ -1,22 +1,48 @@
-DOUCTYPE <html>
- html lang=<pt-br>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    meta cahrset=<UTF-8>
-    meta name= viewport
-content= "width=device-width, 
-initial - scale=1.0">
-    <title>Agro forte, Futuro sustentável</
-title>
-     
-     <link rel=" "styleshet" href="STYLE.CSS" >
-</head> 
-<body> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div class="container"> 
+<div class="container">
+    <h1>Agro Forte, Futuro Sustentável</h1>
+    <p>Tome decisões para equilibrar a produção agrícola e a preservação ambiental.</p>
+    
+    <div class="painel">
+        <div class="card">
+            <h2>Produção</h2>
+            <h1 id="prod">50</h1>
+        </div>
+        <div class="card">
+            <h2>Meio Ambiente</h2>
+            <h1 id="amb">50</h1>
+        </div>
+    </div>
 
-    <h1>   Agro Forte, Futuro sustentável</h1>
+    <h2>Escolha uma ação:</h2>
+    <button class="verde" onclick="processar('gotejamento')">Irrigação por Gotejamento</button>
+    <button class="vermelho" onclick="processar('aspersao')">Irrigação por Aspersão</button>
+    <br>
+    <button class="verde" onclick="processar('biologico')">Controle Biológico</button>
+    <button class="vermelho" onclick="processar('quimico')">Agrotóxicos</button>
+    <br>
+    <button class="verde" onclick="processar('reflorestamento')">Reflorestamento</button>
+    <button class="vermelho" onclick="processar('desmatamento')">Desmatamento</button>
+    <br>
+    <button id="reiniciar" onclick="reiniciarJogo()">Reiniciar Jogo</button>
 
-    </p>
-          Tome decisões para equilibrar a produção agŕcola e a produção ambiental.
-          
+    <p id="conselho">Faça sua primeira escolha!</p>
+
+    <div id="historico">
+        <h3>Histórico:</h3>
+        <ul id="listaHistorico"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
